@@ -70,6 +70,7 @@ module mult_tb();
             end
         end
 
+        // Test clear to make sure it works
         @(negedge clk);
         Clr = 1'b1;
         @(negedge clk);
