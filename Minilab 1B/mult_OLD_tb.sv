@@ -1,4 +1,4 @@
-module mult_tb();
+module mult_OLD_tb();
 
     parameter NUM_ITERATIONS = 10;
 
@@ -16,7 +16,7 @@ module mult_tb();
     reg failed;
 
     // TODO: Instantiate DUT
-    matvec_mult iDUT (.clk(clk), .rst(rst_n), .Clr(Clr), .start(start), .done(done), .result(actualC));
+    matvec_mult iDUT (.clk(clk), .rst(rst_n), .Clr(Clr), .start(start), .done(done), .results(actualC));
 
     // Checker - see below
     matrix_mult expectedOutput(.A(A), .B(B), .C(expectedC), .clk(clk), .rst_n(rst_n));
@@ -35,39 +35,35 @@ module mult_tb();
         // Get ready for testing
         rst_n = 1'b1;
         @(negedge clk);
-
-        // All testing happens in this loop and the number of iterations can be configured
-        for (integer iteration = 0; iteration < NUM_ITERATIONS; iteration = iteration + 1) begin
             
-            // TODO: Reset MAC and FIFO (if needed)
+        // TODO: Reset MAC and FIFO (if needed)
 
-            // Get new data for A and B
-            @(negedge clk);
-            for (integer x = 0; x < 8; x = x + 1) begin
-                for (integer y = 0; y < 8; y = y + 1) begin
-                    A[x][y] = $urandom_range(0, (2 ** 8) - 1);
-                end
-
-                B[x] = $urandom_range(0, (2 ** 8) - 1);
+        // Get new data for A and B
+        @(negedge clk);
+        for (integer x = 0; x < 8; x = x + 1) begin
+            for (integer y = 0; y < 8; y = y + 1) begin
+                A[x][y] = $urandom_range(0, (2 ** 8) - 1);
             end
 
-            // TODO: Insert data into FIFO/MAC
+            B[x] = $urandom_range(0, (2 ** 8) - 1);
+        end
 
-            @(posedge clk);
-            @(negedge clk);
+        // TODO: Insert data into FIFO/MAC
 
-            // TODO: Wait for output to be ready
+        @(posedge clk);
+        @(negedge clk);
 
-            @(negedge clk);
+        // TODO: Wait for output to be ready
 
-            if (expectedC !== actualC) begin
-                $display("ERROR: expected didn't match actual (iteration %0d - time %0d ns)", iteration, $time);
-                for (integer i = 0; i < 8; i = i + 1) begin
-                    if (expectedC[i] !== actualC[i]) $display("Index %0d didn't match, expected %0d but was %0d", 
-                                    i, $unsigned(expectedC[i]), $unsigned(actualC[i]));
-                end
-                failed = 1'b1;
+        @(negedge clk);
+
+        if (expectedC !== actualC) begin
+            $display("ERROR: expected didn't match actual (iteration %0d - time %0d ns)", iteration, $time);
+            for (integer i = 0; i < 8; i = i + 1) begin
+                if (expectedC[i] !== actualC[i]) $display("Index %0d didn't match, expected %0d but was %0d", 
+                                i, $unsigned(expectedC[i]), $unsigned(actualC[i]));
             end
+            failed = 1'b1;
         end
 
         // Test clear to make sure it works
@@ -85,6 +81,12 @@ module mult_tb();
         $display("End testing");
         if (failed) $display("See output for fail details");
         else $display("All cases passed!");
+        $stop();
+    end
+
+    initial begin
+        repeat (2000) @(negedge clk);
+        $display("ERROR: TOO MANY CLOCK CYCLES PASSED...");
         $stop();
     end
 

@@ -1,3 +1,8 @@
+// vsim work.feed_from_mem_tb -L C:/intelFPGA_lite/24.1std/questa_fse/intel/verilog/altera_mf -voptargs="+acc"
+
+`timescale 1 ps / 1 ps
+
+
 module feed_from_mem_tb();
 
     parameter NUM_FIFOS=9;
@@ -11,12 +16,15 @@ module feed_from_mem_tb();
     wire [DATA_WIDTH-1:0] dataByte;
     wire [NUM_FIFOS-1:0] fifoEnable;
 
-    reg [7:0] memory [0:7] [0:8];
+    reg [7:0] memory [0:8] [0:7];
+    reg [7:0] expectedVal;
     reg failed;
+    wire memory_busy;
+    wire done;
 
 
 
-    feed_from_mem iDUT #(.NUM_FIFOS(NUM_FIFOS), .DEPTH(DEPTH), .DATA_WIDTH(DATA_WIDTH)) (
+    fill_from_mem #(.NUM_FIFOS(NUM_FIFOS), .DEPTH(DEPTH), .DATA_WIDTH(DATA_WIDTH)) iDUT (
         // System Controls
         .clk(clk),
         .rst_n(rst_n),
@@ -29,7 +37,9 @@ module feed_from_mem_tb();
 
         // Interface to FIFO
         .dataByte(dataByte),  // Data written to selected FIFO [DATA_WIDTH-1:0]
-        .fifoEnable(fifoEnable)     // Write-Enable to FIFOs (1-hot) [NUM_FIFOS-1:0]
+        .fifoEnable(fifoEnable),     // Write-Enable to FIFOs (1-hot) [NUM_FIFOS-1:0]
+        .memory_busy (memory_busy),
+        .done(done)
     );
 
     initial begin
@@ -46,25 +56,29 @@ module feed_from_mem_tb();
         rst_n = 1'b1;
         @(negedge clk);
 
-        for (integer i = 0; i < memory.size; i = i + 1) begin
-            for (integer j = 0; j < memory[0].size; j = j + 1) begin
-                
-                // Assert fill for 1 clock cycle
-                @(negedge clk);
-                fill = 1'b1;
+        // Assert fill for 1 clock cycle
+        @(negedge clk);
+        fill = 1'b1;
+        @(posedge clk);
+        @(negedge clk);
+        fill = 1'b0;
+        @(posedge clk);
+
+        for (integer i = 0; i < 9; i = i + 1) begin
+            @(negedge memory_busy);
+            repeat (3) @(negedge clk);
+
+
+            for (integer j = 0; j < 8; j = j + 1) begin
+                expectedVal = memory[i][7-j];
                 @(posedge clk);
-                @(negedge clk);
-                fill = 1'b0;
-                @(posedge clk);
+            
 
                 // Wait until fifoEnable goes high (data should be ready then)
-                @(posedge fifoEnable);
-                if (dataByte !== memory[i][j]) begin
-                    $display("ERROR: at time %0d, actual value of 0x%h didn't match expected 0x%h", dataByte, memory[i][j]);
+                if (dataByte !== expectedVal) begin
+                    $display("ERROR: at time %0d, actual value of 0x%h didn't match expected 0x%h", $time, dataByte, expectedVal);
                     failed = 1'b1;
                 end
-                @(negedge clk);
-                addr = addr + 1'b1;
             end
         end
 
