@@ -7,7 +7,8 @@ module matvec_mult (
     input wire Clr,
     input wire start,
     output logic done,
-    output logic [23:0]results[0:7] //8 results, each 24 bits wide
+    output logic [191:0]results, //8 results, each 24 bits wide (flattened: 8×24=192 bits)
+    output logic [1:0]state_out
 );
 
 logic all_fifos_full, all_fifos_empty;
@@ -28,6 +29,8 @@ logic [7:0]FIFO_data_vector;
 
 logic [7:0] B_shift_reg[0:7]; //8 wide shift (8x8) register for B inputs to MACs
 
+logic [23:0] mac_results[0:7]; //internal unpacked array for MAC outputs
+
 reg [8:0] MAC_enables; //one enable per MAC unit (but add 8 bit depth to simplify shift register)
 wire MAC_enables_conv[7:0];
 wire VEC_enable;
@@ -41,6 +44,8 @@ typedef enum logic [1:0] {
     DONE
 } state_t;
 state_t current_state, next_state;
+
+assign state_out = current_state;
 
 assign all_fifos_full   = &{matrix_fill_status[7], matrix_fill_status[6], matrix_fill_status[5], matrix_fill_status[4], matrix_fill_status[3], matrix_fill_status[2], matrix_fill_status[1], matrix_fill_status[0], vector_fill_status};
 assign all_fifos_empty  = &{matrix_empty_status[7], matrix_empty_status[6], matrix_empty_status[5], matrix_empty_status[4], matrix_empty_status[3], matrix_empty_status[2], matrix_empty_status[1], matrix_empty_status[0], vector_empty_status};
@@ -115,8 +120,16 @@ MAC iMAC[0:7](
     .Clr(Clr),
     .Ain(FIFO_data_matrix),  //from matrix FIFO 0
     .Bin(B_shift_reg),     //from vector FIFO (8 bit bus, 8 values)
-    .Cout(results)         //to next MAC (each output is 24 bits wide)
+    .Cout(mac_results)     //to internal unpacked array
 );
+
+// Pack the unpacked array into a flat vector for the output port
+genvar k;
+generate
+    for(k=0; k<8; k=k+1) begin : PACK_RESULTS
+        assign results[k*24 +: 24] = mac_results[k];
+    end
+endgenerate
 
 
 //MAC enable and B input shift register chaining logic

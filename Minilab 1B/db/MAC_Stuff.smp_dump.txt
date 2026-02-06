@@ -1,0 +1,20 @@
+
+State Machine - |matvec_mult|current_state
+Name current_state.DONE current_state.COMPUTE current_state.FILL current_state.IDLE 
+current_state.IDLE 0 0 0 0 
+current_state.FILL 0 0 1 1 
+current_state.COMPUTE 0 1 0 1 
+current_state.DONE 1 0 0 1 
+
+State Machine - |matvec_mult|fill_from_mem:iFIFOFILLER|state
+Name state.EVAL state.FILL state.LOAD state.IDLE 
+state.IDLE 0 0 0 0 
+state.LOAD 0 0 1 1 
+state.FILL 0 1 0 1 
+state.EVAL 1 0 0 1 
+
+State Machine - |matvec_mult|fill_from_mem:iFIFOFILLER|mem_wrapper:MEM|state
+Name state.IDLE state.RESPOND state.WAIT 
+state.IDLE 0 0 0 
+state.WAIT 1 0 1 
+state.RESPOND 1 1 0 

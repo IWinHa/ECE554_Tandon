@@ -1,0 +1,286 @@
+EDA Netlist Writer report for MAC_Stuff
+Thu Feb  5 17:16:20 2026
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Thu Feb  5 17:16:20 2026 ;
+; Revision Name             ; MAC_Stuff                             ;
+; Top-level Entity Name     ; matvec_mult                           ;
+; Family                    ; Cyclone V                             ;
+; Simulation Files Creation ; Successful                            ;
++---------------------------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                             ;
++---------------------------------------------------------------------------------------------------+-----------------------------+
+; Option                                                                                            ; Setting                     ;
++---------------------------------------------------------------------------------------------------+-----------------------------+
+; Tool Name                                                                                         ; Questa Intel FPGA (Verilog) ;
+; Generate functional simulation netlist                                                            ; On                          ;
+; Truncate long hierarchy paths                                                                     ; Off                         ;
+; Map illegal HDL characters                                                                        ; Off                         ;
+; Flatten buses into individual nodes                                                               ; Off                         ;
+; Maintain hierarchy                                                                                ; Off                         ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                         ;
+; Enable glitch filtering                                                                           ; Off                         ;
+; Do not write top level VHDL entity                                                                ; Off                         ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                         ;
+; Architecture name in VHDL output netlist                                                          ; structure                   ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                         ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                         ;
++---------------------------------------------------------------------------------------------------+-----------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                   ;
++----------------------------------------------------------------------------------------------+
+; Generated Files                                                                              ;
++----------------------------------------------------------------------------------------------+
+; I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/simulation/questa/MAC_Stuff.vo ;
++----------------------------------------------------------------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Processing started: Thu Feb  5 17:16:13 2026
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off MAC_Stuff -c MAC_Stuff
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204001): Port "results[7][0]" is changed into "results_7_0" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][1]" is changed into "results_7_1" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][2]" is changed into "results_7_2" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][3]" is changed into "results_7_3" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][4]" is changed into "results_7_4" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][5]" is changed into "results_7_5" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][6]" is changed into "results_7_6" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][7]" is changed into "results_7_7" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][8]" is changed into "results_7_8" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][9]" is changed into "results_7_9" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][10]" is changed into "results_7_10" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][11]" is changed into "results_7_11" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][12]" is changed into "results_7_12" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][13]" is changed into "results_7_13" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][14]" is changed into "results_7_14" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][15]" is changed into "results_7_15" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][16]" is changed into "results_7_16" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][17]" is changed into "results_7_17" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][18]" is changed into "results_7_18" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][19]" is changed into "results_7_19" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][20]" is changed into "results_7_20" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][21]" is changed into "results_7_21" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][22]" is changed into "results_7_22" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[7][23]" is changed into "results_7_23" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][0]" is changed into "results_6_0" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][1]" is changed into "results_6_1" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][2]" is changed into "results_6_2" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][3]" is changed into "results_6_3" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][4]" is changed into "results_6_4" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][5]" is changed into "results_6_5" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][6]" is changed into "results_6_6" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][7]" is changed into "results_6_7" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][8]" is changed into "results_6_8" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][9]" is changed into "results_6_9" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][10]" is changed into "results_6_10" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][11]" is changed into "results_6_11" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][12]" is changed into "results_6_12" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][13]" is changed into "results_6_13" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][14]" is changed into "results_6_14" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][15]" is changed into "results_6_15" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][16]" is changed into "results_6_16" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][17]" is changed into "results_6_17" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][18]" is changed into "results_6_18" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][19]" is changed into "results_6_19" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][20]" is changed into "results_6_20" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][21]" is changed into "results_6_21" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][22]" is changed into "results_6_22" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[6][23]" is changed into "results_6_23" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][0]" is changed into "results_5_0" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][1]" is changed into "results_5_1" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][2]" is changed into "results_5_2" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][3]" is changed into "results_5_3" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][4]" is changed into "results_5_4" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][5]" is changed into "results_5_5" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][6]" is changed into "results_5_6" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][7]" is changed into "results_5_7" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][8]" is changed into "results_5_8" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][9]" is changed into "results_5_9" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][10]" is changed into "results_5_10" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][11]" is changed into "results_5_11" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][12]" is changed into "results_5_12" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][13]" is changed into "results_5_13" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][14]" is changed into "results_5_14" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][15]" is changed into "results_5_15" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][16]" is changed into "results_5_16" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][17]" is changed into "results_5_17" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][18]" is changed into "results_5_18" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][19]" is changed into "results_5_19" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][20]" is changed into "results_5_20" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][21]" is changed into "results_5_21" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][22]" is changed into "results_5_22" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[5][23]" is changed into "results_5_23" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][0]" is changed into "results_4_0" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][1]" is changed into "results_4_1" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][2]" is changed into "results_4_2" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][3]" is changed into "results_4_3" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][4]" is changed into "results_4_4" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][5]" is changed into "results_4_5" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][6]" is changed into "results_4_6" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][7]" is changed into "results_4_7" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][8]" is changed into "results_4_8" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][9]" is changed into "results_4_9" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][10]" is changed into "results_4_10" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][11]" is changed into "results_4_11" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][12]" is changed into "results_4_12" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][13]" is changed into "results_4_13" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][14]" is changed into "results_4_14" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][15]" is changed into "results_4_15" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][16]" is changed into "results_4_16" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][17]" is changed into "results_4_17" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][18]" is changed into "results_4_18" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][19]" is changed into "results_4_19" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][20]" is changed into "results_4_20" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][21]" is changed into "results_4_21" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][22]" is changed into "results_4_22" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[4][23]" is changed into "results_4_23" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][0]" is changed into "results_3_0" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][1]" is changed into "results_3_1" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][2]" is changed into "results_3_2" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][3]" is changed into "results_3_3" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][4]" is changed into "results_3_4" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][5]" is changed into "results_3_5" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][6]" is changed into "results_3_6" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][7]" is changed into "results_3_7" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][8]" is changed into "results_3_8" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][9]" is changed into "results_3_9" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][10]" is changed into "results_3_10" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][11]" is changed into "results_3_11" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][12]" is changed into "results_3_12" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][13]" is changed into "results_3_13" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][14]" is changed into "results_3_14" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][15]" is changed into "results_3_15" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][16]" is changed into "results_3_16" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][17]" is changed into "results_3_17" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][18]" is changed into "results_3_18" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][19]" is changed into "results_3_19" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][20]" is changed into "results_3_20" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][21]" is changed into "results_3_21" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][22]" is changed into "results_3_22" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[3][23]" is changed into "results_3_23" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][0]" is changed into "results_2_0" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][1]" is changed into "results_2_1" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][2]" is changed into "results_2_2" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][3]" is changed into "results_2_3" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][4]" is changed into "results_2_4" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][5]" is changed into "results_2_5" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][6]" is changed into "results_2_6" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][7]" is changed into "results_2_7" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][8]" is changed into "results_2_8" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][9]" is changed into "results_2_9" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][10]" is changed into "results_2_10" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][11]" is changed into "results_2_11" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][12]" is changed into "results_2_12" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][13]" is changed into "results_2_13" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][14]" is changed into "results_2_14" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][15]" is changed into "results_2_15" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][16]" is changed into "results_2_16" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][17]" is changed into "results_2_17" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][18]" is changed into "results_2_18" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][19]" is changed into "results_2_19" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][20]" is changed into "results_2_20" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][21]" is changed into "results_2_21" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][22]" is changed into "results_2_22" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[2][23]" is changed into "results_2_23" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][0]" is changed into "results_1_0" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][1]" is changed into "results_1_1" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][2]" is changed into "results_1_2" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][3]" is changed into "results_1_3" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][4]" is changed into "results_1_4" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][5]" is changed into "results_1_5" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][6]" is changed into "results_1_6" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][7]" is changed into "results_1_7" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][8]" is changed into "results_1_8" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][9]" is changed into "results_1_9" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][10]" is changed into "results_1_10" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][11]" is changed into "results_1_11" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][12]" is changed into "results_1_12" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][13]" is changed into "results_1_13" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][14]" is changed into "results_1_14" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][15]" is changed into "results_1_15" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][16]" is changed into "results_1_16" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][17]" is changed into "results_1_17" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][18]" is changed into "results_1_18" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][19]" is changed into "results_1_19" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][20]" is changed into "results_1_20" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][21]" is changed into "results_1_21" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][22]" is changed into "results_1_22" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[1][23]" is changed into "results_1_23" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][0]" is changed into "results_0_0" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][1]" is changed into "results_0_1" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][2]" is changed into "results_0_2" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][3]" is changed into "results_0_3" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][4]" is changed into "results_0_4" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][5]" is changed into "results_0_5" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][6]" is changed into "results_0_6" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][7]" is changed into "results_0_7" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][8]" is changed into "results_0_8" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][9]" is changed into "results_0_9" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][10]" is changed into "results_0_10" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][11]" is changed into "results_0_11" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][12]" is changed into "results_0_12" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][13]" is changed into "results_0_13" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][14]" is changed into "results_0_14" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][15]" is changed into "results_0_15" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][16]" is changed into "results_0_16" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][17]" is changed into "results_0_17" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][18]" is changed into "results_0_18" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][19]" is changed into "results_0_19" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][20]" is changed into "results_0_20" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][21]" is changed into "results_0_21" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][22]" is changed into "results_0_22" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204001): Port "results[0][23]" is changed into "results_0_23" because it's a member of 2-D array port "results" File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 11
+Info (204019): Generated file MAC_Stuff.vo in folder "I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/simulation/questa/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4777 megabytes
+    Info: Processing ended: Thu Feb  5 17:16:20 2026
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:02
+
+

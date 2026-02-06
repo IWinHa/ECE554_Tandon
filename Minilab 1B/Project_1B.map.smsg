@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at matvec_mult.sv(9): object "done" differs only in case from object "DONE" in the same scope File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/matvec_mult.sv Line: 9
+Info (10281): Verilog HDL Declaration information at feed_from_mem.sv(19): object "fill" differs only in case from object "FILL" in the same scope File: I:/Desktop/ACADEMIC_CLASSES/ECE554/ECE554_minilab0/Minilab 1B/feed_from_mem.sv Line: 19
