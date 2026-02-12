@@ -12,7 +12,7 @@ module row_buffer #(
 
     always_ff @(posedge clk) begin
         buffered_pixel <= stored_row[ROW_SIZE - 1];
-        stored_row <= {stored_row, pixel};
+        stored_row <= '{stored_row, pixel};
     end
 
 endmodule

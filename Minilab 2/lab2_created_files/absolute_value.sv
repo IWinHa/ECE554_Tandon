@@ -3,11 +3,14 @@ module absolute_value #(
 ) (
     input clk,
     input rst_n,
-    input [PIXEL_SIZE-1:0] pixel,
-    output [PIXEL_SIZE-1:0] outPixel
+    input signed [PIXEL_SIZE+2:0] pixel,
+    output signed [PIXEL_SIZE-1:0] outPixel
 );
 
     always_ff @(posedge clk or negedge rst_n)
         if (~rst_n) outPixel <= {PIXEL_SIZE{1'b0}};
-        else outPixel <= {1'b0, pixel};
+        else begin
+            if (pixel < 0) outPixel <= -pixel[PIXEL_SIZE-1:0];
+            else outPixel <= pixel[PIXEL_SIZE-1:0];
+        end
 endmodule

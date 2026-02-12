@@ -4,7 +4,7 @@ module bayer_generator #(
     input clk,
     input rst_n,
     input [PIXEL_SIZE-1:0] pixel_from_queue,
-    input [PIXEL_SIZE-1:0] pixel_raw
+    input [PIXEL_SIZE-1:0] pixel_raw,
     output [PIXEL_SIZE-1:0] pixel_out
 );
 
