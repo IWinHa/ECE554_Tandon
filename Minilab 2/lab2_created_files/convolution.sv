@@ -7,7 +7,7 @@ module convolution #(
     input rst_n,
     input [PIXEL_SIZE-1:0] pixel,
     input signed [PIXEL_SIZE-1:0] filter [-1:1] [-1:1],
-    output [PIXEL_SIZE+2:0] output_pixel
+    output reg [PIXEL_SIZE+2:0] output_pixel
 );
 
     reg [PIXEL_SIZE-1:0] x [2:0][2:0];
@@ -38,7 +38,7 @@ module convolution #(
         output_pixel = {PIXEL_SIZE{1'b0}};
         for (integer i = 0; i <= 2; i = i + 1) begin
             for (integer j = 0; j <= 2; j = j + 1) begin
-                output_pixel = output_pixel + ($signed(x[i][j]) * h[i - 1][j - 1]);
+                output_pixel = output_pixel + ($signed(x[i][j]) * filter[i - 1][j - 1]);
             end
         end
     end

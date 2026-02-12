@@ -4,7 +4,7 @@ module absolute_value #(
     input clk,
     input rst_n,
     input signed [PIXEL_SIZE+2:0] pixel,
-    output signed [PIXEL_SIZE-1:0] outPixel
+    output reg signed [PIXEL_SIZE-1:0] outPixel
 );
 
     always_ff @(posedge clk or negedge rst_n)

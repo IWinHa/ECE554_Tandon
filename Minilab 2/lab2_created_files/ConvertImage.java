@@ -1,51 +1,44 @@
-import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import javax.imageio.ImageIO;
 import java.io.File;
+import java.awt.image.BufferedImage;
+import java.awt.Image;
 
 public class ConvertImage {
-
-    private static final String NEW_LINE = System.lineSeparator();
-    private static final String UNKNOWN_CHARACTER = ".";
 
 
     public static void main(String[] args) {
 
-        // https://mkyong.com/java/how-to-convert-file-to-hex-in-java/
-        // Literally plagarized 
+    
 
-        final String INPUT_FILE = "I:\\Desktop\\ACADEMIC_CLASSES\\ECE554\\ECE554_minilab0\\Minilab 2\\lab2_created_files\\image.jpg";
-        final String OUTPUT_FILE = "I:\\Desktop\\ACADEMIC_CLASSES\\ECE554\\ECE554_minilab0\\Minilab 2\\lab2_created_files\\created_hex.hex";
+        final String INPUT_FILE = "C:\\Users\\tando\\Desktop\\UWCoding\\ECE554\\ECE554_Tandon\\Minilab 2\\lab2_created_files\\image.jpg";
+        final String OUTPUT_FILE = "C:\\Users\\tando\\Desktop\\UWCoding\\ECE554\\ECE554_Tandon\\Minilab 2\\lab2_created_files\\created_hex.hex";
 
 
-        System.out.println("Hello");
         File path = new File(INPUT_FILE);
 
-        String result = "";
-        String hex = "";
-        String input = "";
-        int value;
+        try (FileWriter toWrite = new FileWriter(new File(OUTPUT_FILE), false);) {
 
-        // path to inputstream....
-        try (FileInputStream inputStream = new FileInputStream(path);
-            FileWriter toWrite = new FileWriter(new File(OUTPUT_FILE), false);) {
+            Image image = ImageIO.read(path);
+            BufferedImage buffered = (BufferedImage) image;
 
-            while ((value = inputStream.read()) != -1) {
+            // path to inputstream....
 
-                hex += String.format("%02X ", value);
+            for (int i = 0; i < buffered.getHeight(); i++) {
+                for (int j = 0; j < buffered.getWidth(); j++) {
 
-                //If the character is unable to convert, just prints a dot "."
-                if (!Character.isISOControl(value)) {
-                    input += (char) value;
-                } else {
-                    input += UNKNOWN_CHARACTER;
-                }
+                    int rgb = buffered.getRGB(j, i);
 
-                // After 15 bytes, reset everything for formatting purpose
-                result += String.format("%-60s%n", hex, input);
-                toWrite.write(String.format("%-60s%n", hex, input));
-                hex = "";
-                input = "";
+                    // https://stackoverflow.com/questions/2615522/java-bufferedimage-getting-red-green-and-blue-individually
+                    int red = (rgb >> 16) & 0x000000FF;
+                    int green = (rgb >>8 ) & 0x000000FF;
+                    int blue = (rgb) & 0x000000FF;
+                    int value = (i % 2 == 0) ? ((j % 2 == 0) ? green : red) :
+                                                ((j % 2 == 0) ? blue : green);
+
+                    toWrite.write(String.format("%02X\n", value));
+            }
 
             }
 
@@ -54,7 +47,5 @@ public class ConvertImage {
         catch (IOException e) {
             System.out.println("Some error: " + e);
         }
-
-        System.out.println("Result: " + result);
     }
 }

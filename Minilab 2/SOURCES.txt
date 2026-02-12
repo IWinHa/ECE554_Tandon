@@ -1,0 +1,9 @@
+https://docs.altera.com/r/docs/683472/25.3/altera-fpga-software-installation-and-licensing/installing-drivers-on-rhel-8/ubuntu-18-and-above-versions
+https://stackoverflow.com/questions/6524196/java-get-pixel-array-from-image
+https://stackoverflow.com/questions/2615522/java-bufferedimage-getting-red-green-and-blue-individually
+https://stackoverflow.com/questions/13605248/java-converting-image-to-bufferedimage
+https://stackoverflow.com/questions/9132149/how-to-convert-buffered-image-to-image-and-vice-versa
+https://stackoverflow.com/questions/29281358/how-to-create-a-gray-scale-image-from-pixel-values-using-java
+https://stackoverflow.com/questions/140131/convert-a-string-representation-of-a-hex-dump-to-a-byte-array-using-java
+https://stackoverflow.com/questions/70248122/is-there-a-way-to-convert-hex-string-to-bytes-using-java-streams
+https://stackoverflow.com/questions/12674064/how-to-save-a-bufferedimage-as-a-file

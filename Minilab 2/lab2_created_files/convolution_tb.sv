@@ -1,8 +1,9 @@
 module convolution_tb();
     parameter ROW_SIZE = 1280;
     parameter PIXEL_SIZE = 12;
-    parameter NUM_COLS = 5;
+    parameter NUM_COLS = 100;
     parameter NUM_PIXELS = ROW_SIZE * NUM_COLS;
+    parameter PRINT_INTERVAL = 100;
 
     reg clk;
     reg rst_n;
@@ -23,6 +24,9 @@ module convolution_tb();
         // TODO: Add stuff here
     );
 
+    string INPUT_FILE = "../ECE554_Tandon/Minilab 2/lab2_created_files/created_hex.hex";
+    string OUTPUT_FILE = "../ECE554_Tandon/Minilab 2/lab2_created_files/written_data.hex";
+
     initial begin
         clk = 1'b0;
         rst_n = 1'b0;
@@ -31,23 +35,29 @@ module convolution_tb();
 
         @(negedge clk);
 
-        $readmemh("to_read.hex", MEMORY);
+        $readmemh(INPUT_FILE, MEMORY);
 
-        out_file = $fopen("written_data.hex", "w");
+        out_file = $fopen(OUTPUT_FILE, "w");
+
+        rst_n = 1'b1;
 
         repeat (20) @(negedge clk);
 
         for (integer i = 0; i < NUM_PIXELS; i = i + 1) begin
             @(negedge clk);
             input_pixel = MEMORY[i];
+            if (i % NUM_PIXELS == 0) $display("ITERATION %0d...", i);
             @(posedge clk);
         end
 
+        $display("FINISHED DUMPING");
+        $fclose(out_file);
+        $stop();
     end
 
     always #5 clk = ~clk;
 
     always @(posedge clk) begin
-        $fwrite(out_file, output_pixel);
+        if (rst_n && (output_pixel[7:0] !== 8'hxx)) $fwrite(out_file, "%H\n", output_pixel[7:0]);
     end
 endmodule
