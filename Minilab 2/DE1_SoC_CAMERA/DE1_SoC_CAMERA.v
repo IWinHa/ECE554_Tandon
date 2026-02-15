@@ -309,6 +309,40 @@ CCD_Capture			u3	(
 							.iCLK(~D5M_PIXLCLK),
 							.iRST(DLY_RST_2)
 						   );
+
+
+
+/** TODO: ADDED CODE */
+
+parameter ROW_SIZE = 640;
+parameter PIXEL_SIZE = 12;
+wire filter_type = 1'b0;
+wire [PIXEL_SIZE-1:0] OUTPUTTED_DATA;
+wire CONVOLUTION_VALID;
+wire [PIXEL_SIZE-1:0] true_red = (SW[1]) ? OUTPUTTED_DATA : sCCD_R;
+wire [PIXEL_SIZE-1:0] true_green = (SW[1]) ? OUTPUTTED_DATA : sCCD_G;
+wire [PIXEL_SIZE-1:0] true_blue = (SW[1]) ? OUTPUTTED_DATA : sCCD_B;
+wire true_valid = (SW[1]) ? CONVOLUTION_VALID : sCCD_DVAL;
+
+convolution_top #(
+    .ROW_SIZE(ROW_SIZE),
+    .PIXEL_SIZE(PIXEL_SIZE)
+)
+    my_convolution(
+        .clk(D5M_PIXLCLK),
+        .rst_n(D5M_RESET_N),
+        .input_pixel(mCCD_DATA),
+        .filter_type(filter_type),
+        .output_pixel(OUTPUTTED_DATA),
+        .x_cont(iX_Cont),
+        .y_cont(iY_Cont),
+        .valid_in(mCCD_DVAL),
+        .valid_out(CONVOLUTION_VALID)
+);
+
+/** TODO: End of added code */
+
+
 //D5M raw date convert to RGB data
 
 RAW2RGB				u4	(	
@@ -350,8 +384,9 @@ Sdram_Control	   u7	(	//	HOST Side
 							.CLK(sdram_ctrl_clk),
 
 							//	FIFO Write Side 1
-							.WR1_DATA({1'b0,sCCD_G[11:7],sCCD_B[11:2]}),
-							.WR1(sCCD_DVAL),
+                            // TODO: CODE CHANGED
+							.WR1_DATA({1'b0,true_green[11:7],true_blue[11:2]}),
+							.WR1(true_valid),
 							.WR1_ADDR(0),
                      .WR1_MAX_ADDR(640*480),
 						   .WR1_LENGTH(8'h50),
@@ -359,8 +394,8 @@ Sdram_Control	   u7	(	//	HOST Side
 							.WR1_CLK(~D5M_PIXLCLK),
 
 							//	FIFO Write Side 2
-							.WR2_DATA({1'b0,sCCD_G[6:2],sCCD_R[11:2]}),
-							.WR2(sCCD_DVAL),
+							.WR2_DATA({1'b0,true_green[6:2],true_red[11:2]}),
+							.WR2(true_valid),
 							.WR2_ADDR(23'h100000),
 							.WR2_MAX_ADDR(23'h100000+640*480),
 							.WR2_LENGTH(8'h50),

@@ -14,8 +14,8 @@ public class RemakeImage {
 
         final String INPUT_FILE = "C:\\Users\\tando\\Desktop\\UWCoding\\ECE554\\ECE554_Tandon\\Minilab 2\\lab2_created_files\\written_data.hex";
         final String OUTPUT_FILE = "C:\\Users\\tando\\Desktop\\UWCoding\\ECE554\\ECE554_Tandon\\Minilab 2\\lab2_created_files\\created_image.png";
-        final int OUTPUT_WIDTH = 1280;
-        final int OUTPUT_HEIGHT = 100;
+        final int OUTPUT_WIDTH = 640;
+        final int OUTPUT_HEIGHT = 480;
         
 
         try {
