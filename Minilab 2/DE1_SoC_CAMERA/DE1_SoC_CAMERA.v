@@ -314,7 +314,7 @@ CCD_Capture			u3	(
 
 /** TODO: ADDED CODE */
 
-parameter ROW_SIZE = 640;
+parameter ROW_SIZE = 1280;
 parameter PIXEL_SIZE = 12;
 wire filter_type = 1'b0;
 wire [PIXEL_SIZE-1:0] OUTPUTTED_DATA;
@@ -322,7 +322,7 @@ wire CONVOLUTION_VALID;
 wire [PIXEL_SIZE-1:0] true_red = (SW[1]) ? OUTPUTTED_DATA : sCCD_R;
 wire [PIXEL_SIZE-1:0] true_green = (SW[1]) ? OUTPUTTED_DATA : sCCD_G;
 wire [PIXEL_SIZE-1:0] true_blue = (SW[1]) ? OUTPUTTED_DATA : sCCD_B;
-wire true_valid = (SW[1]) ? CONVOLUTION_VALID : sCCD_DVAL;
+wire true_valid = (SW[2]) ? CONVOLUTION_VALID : sCCD_DVAL;
 
 convolution_top #(
     .ROW_SIZE(ROW_SIZE),

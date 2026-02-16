@@ -14,6 +14,7 @@ module convolution #(
 
     reg [PIXEL_SIZE-1:0] x [2:0][2:0];
     wire [PIXEL_SIZE-1:0] intermediatePixel [0:1];
+    reg valid_mid;
 
 
     row_buffer #(.ROW_SIZE(ROW_SIZE), .PIXEL_SIZE(PIXEL_SIZE)) buffer [1:0] (
