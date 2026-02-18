@@ -75,21 +75,20 @@ module convolution_tb();
 
     always @(posedge clk) begin
         if (rst_n && (output_pixel[7:0] !== 8'hxx) && valid_out) begin
-            if (output_pixel > 8'hFF) $fwrite(out_file, "%02H\n", 8'hFF);
-            else $fwrite(out_file, "%02H\n", output_pixel[7:0]);
+            $fwrite(out_file, "%02H\n", output_pixel[7:0]);
         end
     end
 
     always @(posedge clk) begin
         if (~rst_n) X_cont <= 11'b0;
-        else if (X_cont == 1280) X_cont <= 0;
+        else if (X_cont == 1279) X_cont <= 0;
         else if (valid_in) X_cont <= X_cont + 1;
     end
 
     always @(posedge clk) begin
         if (~rst_n) Y_cont <= 11'b0;
-        else if (Y_cont == 960) Y_cont <= 0;
+        else if (Y_cont == 959) Y_cont <= 0;
         else if (valid_in)
-            if (X_cont == 1280) Y_cont <= Y_cont + 1;
+            if (X_cont == 1279) Y_cont <= Y_cont + 1;
     end
 endmodule

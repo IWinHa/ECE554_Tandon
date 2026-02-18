@@ -9,27 +9,15 @@ module row_buffer #(
     output reg [PIXEL_SIZE-1:0] buffered_pixel
 );
 
-    buffer_IP_640 store_data_640 (
-        .aclr(~rst_n),
-	    .clock(clk),
-        .clken((ROW_SIZE == 640) ? enable : 1'b0),
-	    .shiftin(pixel),
-	    .shiftout(buffered_pixel_640),
-	    .taps()
-        
-    );
-
     buffer_IP_1280 store_data_1280 (
         .aclr(~rst_n),
 	    .clock(clk),
-        .clken((ROW_SIZE == 640) ? 1'b0 : enable),
+        .clken(enable),
 	    .shiftin(pixel),
-	    .shiftout(buffered_pixel_1280),
+	    .shiftout(buffered_pixel),
 	    .taps()
         
     );
-
-    assign buffered_pixel = (ROW_SIZE == 640) ? buffered_pixel_640 : buffered_pixel_1280;
 
     // WITHOUT buffer_IP 
 

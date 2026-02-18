@@ -29,8 +29,7 @@ module bayer_generator #(
     always_ff @(posedge clk) 
         valid_out <= (x_cont[0] | y_cont[0]) ? 1'b0 : valid_in;
 
-    // >> 2 should divide by 4
-    wire [PIXEL_SIZE+2:0] sum = temp_pixels[0] + temp_pixels[1] + temp_pixels[2] + temp_pixels[3];
-    assign pixel_out = sum >> 2;
+    wire [PIXEL_SIZE+1:0] sum = temp_pixels[0] + temp_pixels[1] + temp_pixels[2] + temp_pixels[3];
+    assign pixel_out = sum[PIXEL_SIZE+1:2];
 
 endmodule

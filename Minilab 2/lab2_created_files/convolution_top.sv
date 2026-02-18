@@ -16,17 +16,27 @@ module convolution_top #(
 
     wire [PIXEL_SIZE-1:0] first_buffer_pixel;
     wire [PIXEL_SIZE-1:0] gray_pixel;
-    wire signed [PIXEL_SIZE+3:0] convoluted_pixel;
+    wire signed [PIXEL_SIZE+5:0] convoluted_pixel;
     wire gray_valid, convoluted_valid;
+    wire signed [PIXEL_SIZE-1:0] filter [0:2][0:2];
 
-    reg signed [PIXEL_SIZE-1:0] filter [-1:1] [-1:1];
+    typedef logic signed [PIXEL_SIZE-1:0] filter_t [0:2][0:2];
+
+    // 2. Define the constants using that type
+    localparam filter_t filterA = '{
+        '{-1,  0,  1}, 
+        '{-2,  0,  2}, 
+        '{-1,  0,  1}
+    };
+
+    localparam filter_t filterB = '{
+        '{-1, -2, -1}, 
+        '{ 0,  0,  0}, 
+        '{ 1,  2,  1}
+    };
 
     always_comb begin
-        case (filter_type)
-            1'b1: filter <= '{'{-1, 0, 1}, '{-2, 0, 2}, '{-1, 0, 1}};
-            default: filter <= '{'{-1, -2, -1}, '{0, 0, 0}, '{1, 2, 1}};
-        endcase
-
+        filter = (filter_type) ? filterB : filterA;
     end
     
     row_buffer #(.ROW_SIZE(ROW_SIZE), .PIXEL_SIZE(PIXEL_SIZE)) initial_buffer (
@@ -49,7 +59,7 @@ module convolution_top #(
         .valid_out(gray_valid)
     );
 
-    convolution #(.PIXEL_SIZE(PIXEL_SIZE), .ROW_SIZE(ROW_SIZE / 2)) perform_convolution (
+    convolution #(.PIXEL_SIZE(PIXEL_SIZE), .ROW_SIZE(ROW_SIZE)) perform_convolution (
         .clk(clk),
         .rst_n(rst_n),
         .pixel(gray_pixel),

@@ -6,9 +6,9 @@ module convolution #(
     input clk,
     input rst_n,
     input [PIXEL_SIZE-1:0] pixel,
-    input signed [PIXEL_SIZE-1:0] filter [-1:1] [-1:1],
+    input signed [PIXEL_SIZE-1:0] filter [0:2] [0:2],
     input valid_in,
-    output reg signed [PIXEL_SIZE+3:0] output_pixel,
+    output reg signed [PIXEL_SIZE+5:0] output_pixel,
     output reg valid_out
 );
 
@@ -45,7 +45,7 @@ module convolution #(
         output_pixel = '0;
         for (integer i = 0; i <= 2; i = i + 1) begin
             for (integer j = 0; j <= 2; j = j + 1) begin
-                output_pixel = output_pixel + ($signed({1'b0, x[i][j]}) * filter[i - 1][j - 1]);
+                output_pixel = output_pixel + ($signed({1'b0, x[i][j]}) * filter[i][j]);
             end
         end
 

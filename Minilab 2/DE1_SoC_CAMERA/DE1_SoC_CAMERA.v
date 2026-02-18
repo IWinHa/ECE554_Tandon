@@ -316,7 +316,7 @@ CCD_Capture			u3	(
 
 parameter ROW_SIZE = 1280;
 parameter PIXEL_SIZE = 12;
-wire filter_type = 1'b0;
+wire filter_type = SW[3];
 wire [PIXEL_SIZE-1:0] OUTPUTTED_DATA;
 wire CONVOLUTION_VALID;
 wire [PIXEL_SIZE-1:0] true_red = (SW[1]) ? OUTPUTTED_DATA : sCCD_R;
@@ -334,8 +334,8 @@ convolution_top #(
         .input_pixel(mCCD_DATA),
         .filter_type(filter_type),
         .output_pixel(OUTPUTTED_DATA),
-        .x_cont(iX_Cont),
-        .y_cont(iY_Cont),
+        .x_cont(X_Cont),
+        .y_cont(Y_Cont),
         .valid_in(mCCD_DVAL),
         .valid_out(CONVOLUTION_VALID)
 );
