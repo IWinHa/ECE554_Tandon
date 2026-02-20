@@ -3,9 +3,8 @@ module receiver(
     input reset,
     input RxD,
     input baud_rate_generator,
-    input receiver_enable,
-    output [7:0] receiver_buffer,
-    output RDA
+    output reg [7:0] receiver_buffer,
+    output reg RDA
 );
 
     reg [3:0] counter;
