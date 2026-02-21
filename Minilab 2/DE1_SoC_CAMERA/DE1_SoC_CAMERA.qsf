@@ -753,6 +753,11 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name QIP_FILE v/Line_Buffer1.qip
+set_global_assignment -name QIP_FILE sdram_pll.qip
+set_global_assignment -name QIP_FILE Line_Buffer1.qip
+set_global_assignment -name QIP_FILE ../lab2_created_files/buffer_IP_1280.qip
+set_global_assignment -name QIP_FILE ../lab2_created_files/buffer_IP_640.qip
 set_global_assignment -name SYSTEMVERILOG_FILE ../lab2_created_files/row_buffer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../lab2_created_files/convolution_top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../lab2_created_files/convolution.sv
@@ -774,7 +779,6 @@ set_global_assignment -name SDC_FILE DE1_SoC_CAMERA.sdc
 set_global_assignment -name VERILOG_FILE v/SEG7_LUT_6.v
 set_global_assignment -name QIP_FILE v/sdram_pll.qip
 set_global_assignment -name SIP_FILE v/sdram_pll.sip
-set_global_assignment -name QIP_FILE v/Line_Buffer1.qip
 set_global_assignment -name QIP_FILE Sdram_Control/Sdram_RD_FIFO.qip
 set_global_assignment -name QIP_FILE Sdram_Control/Sdram_WR_FIFO.qip
 set_global_assignment -name QIP_FILE ../lab2_created_files/buffer_IP.qip

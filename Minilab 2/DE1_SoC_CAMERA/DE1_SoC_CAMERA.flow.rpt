@@ -1,5 +1,5 @@
 Flow report for DE1_SoC_CAMERA
-Thu Feb 12 18:45:19 2026
+Tue Feb 17 18:08:01 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -41,18 +41,18 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu Feb 12 18:45:07 2026           ;
+; Flow Status                     ; Successful - Tue Feb 17 18:07:50 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; DE1_SoC_CAMERA                                  ;
 ; Top-level Entity Name           ; DE1_SoC_CAMERA                                  ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 805 / 32,070 ( 3 % )                            ;
-; Total registers                 ; 1489                                            ;
+; Logic utilization (in ALMs)     ; 742 / 32,070 ( 2 % )                            ;
+; Total registers                 ; 1419                                            ;
 ; Total pins                      ; 226 / 457 ( 49 % )                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 109,186 / 4,065,280 ( 3 % )                     ;
+; Total block memory bits         ; 105,352 / 4,065,280 ( 3 % )                     ;
 ; Total DSP Blocks                ; 8 / 87 ( 9 % )                                  ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -68,34 +68,37 @@ on the Quartus Prime software download page.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/12/2026 18:43:51 ;
+; Start date & time ; 02/17/2026 18:06:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE1_SoC_CAMERA      ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 51617459224915.177094343128696         ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; MISC_FILE                           ; v/sdram_pll.cmp                        ; --            ; --          ; --         ;
-; MISC_FILE                           ; v/sdram_pll_sim/sdram_pll.vo           ; --            ; --          ; --         ;
-; MISC_FILE                           ; v/Line_Buffer1.bsf                     ; --            ; --          ; --         ;
-; MISC_FILE                           ; ../lab2_created_files/buffer_IP_inst.v ; --            ; --          ; --         ;
-; MISC_FILE                           ; ../lab2_created_files/buffer_IP_bb.v   ; --            ; --          ; --         ;
-; MISC_FILE                           ; ../lab2_created_files/buffer_IP_syn.v  ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; SPD_FILE                            ; v/sdram_pll.spd                        ; --            ; --          ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++-------------------------------------+---------------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                       ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 141657153618259.177137316519076             ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                          ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; v/Line_Buffer1.bsf                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ../lab2_created_files/buffer_IP_1280_inst.v ; --            ; --          ; --         ;
+; MISC_FILE                           ; ../lab2_created_files/buffer_IP_1280_bb.v   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ../lab2_created_files/buffer_IP_1280_syn.v  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ../lab2_created_files/buffer_IP_640_inst.v  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ../lab2_created_files/buffer_IP_640_bb.v    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ../lab2_created_files/buffer_IP_640_syn.v   ; --            ; --          ; --         ;
+; MISC_FILE                           ; v/sdram_pll.cmp                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; v/sdram_pll_sim/sdram_pll.vo                ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)      ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)      ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)      ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                         ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW       ; --            ; --          ; --         ;
+; SPD_FILE                            ; v/sdram_pll.spd                             ; --            ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                          ; --            ; --          ; --         ;
++-------------------------------------+---------------------------------------------+---------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -103,11 +106,11 @@ on the Quartus Prime software download page.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4908 MB             ; 00:00:25                           ;
-; Fitter               ; 00:00:52     ; 1.1                     ; 6819 MB             ; 00:01:43                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 5257 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:10     ; 1.4                     ; 5435 MB             ; 00:00:14                           ;
-; Total                ; 00:01:21     ; --                      ; --                  ; 00:02:28                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4933 MB             ; 00:00:34                           ;
+; Fitter               ; 00:01:14     ; 1.1                     ; 6844 MB             ; 00:02:18                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 5265 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:10     ; 1.4                     ; 5443 MB             ; 00:00:13                           ;
+; Total                ; 00:01:49     ; --                      ; --                  ; 00:03:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
