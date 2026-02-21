@@ -28,6 +28,8 @@ module receiver_tb();
     // Holds the data we are going to transmit
     reg [7:0] data;
 
+    // TODO: Change reset to not be a synchronous reset according to driver.sv?
+
     initial begin
         $display("Begin Testing");
 
